@@ -1,0 +1,22 @@
+{
+  "name": "bun-memory",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "postinstall": "prisma generate && prisma migrate dev",
+    "start": "bun run index.ts",
+    "start:without-plugin": "bun run index-without-plugin.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "5.17.0",
+    "fastify": "^4.28.1",
+    "fastify-plugin": "^4.5.1",
+    "prisma": "^5.17.0"
+  }
+}
